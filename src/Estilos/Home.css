@@ -1,0 +1,75 @@
+
+/* TITULOS */
+
+h1 {
+    position: relative;
+    font-family:'Josefin Sans', sans-serif;
+    font-size:120px;
+    color: #292929;
+    letter-spacing: 20px;
+    margin-left: 100px;
+    font-weight: 500;
+}
+
+h2 {
+    position: relative;
+    font-family:'Josefin Sans', sans-serif;
+    font-size:100px;
+    color: #292929;
+    letter-spacing: 20px;
+    margin-left: 350px;
+    font-weight: 300;
+}
+
+h3 {
+    font-family:'Josefin Sans', sans-serif;
+    font-size:20px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    line-height: 1.5;
+    color: #292929;
+    margin-left: 350px;
+}
+
+/* FOTO PORTADA */
+
+.landing-img {
+    height: 600px;
+    width: 450px;
+    position: absolute;
+    top:75px;
+    right: 215px;
+}
+
+.background {
+    width: 400px;
+    height: 550px;
+    background-color:#4D5F54;
+}
+
+.picture {
+    width: 400px;
+    height: 550px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.picture img {
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+    opacity: .7;
+}
+
+/* REDES */
+
+.redes a i {
+    position: relative;
+    float: right;
+    margin-top: 90px;
+    padding-right: 20px;
+    color: #292929;
+    font-size: 25px;
+}
