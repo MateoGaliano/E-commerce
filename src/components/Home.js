@@ -1,4 +1,5 @@
 import "../Estilos/Home.css";
+import Portada from '../Assets/Portada.png';
 
 function Home() {
   return (
@@ -14,7 +15,7 @@ function Home() {
         <div className="landing-img">
           <div className="background"></div>
           <div className="picture">
-            <img src="/Assets/Portada.png" alt="Woody French bulldog" title="Woody"></img>
+            <img src={Portada} alt="Woody French bulldog" title="Woody"></img>
           </div>
         </div>
 

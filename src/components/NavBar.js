@@ -114,16 +114,16 @@ function validarCuenta() {
                 type="email"
                 id="mail"
                 placeholder="Usuario"
-                minlength="5"
-                maxlength="30"
+                minLength="5"
+                maxLength="30"
                 required
               ></input>
               <input
                 type="password"
                 id="contra"
                 placeholder="Contraseña"
-                minlength="3"
-                maxlength="10"
+                minLength="3"
+                maxLength="10"
                 pattern="[A-Za-z0-9)"
                 required
               ></input>

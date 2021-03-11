@@ -10,8 +10,15 @@ class App extends Component {
       <>
         <body>
         <NavBar title="Woody"></NavBar>
-        <ItemListContainer greeting="Bienvenidos!"></ItemListContainer>
         <Home></Home>
+        <ItemListContainer greeting="Bienvenidos!">
+          <p>En esta web vas a poder encontrar</p>
+        </ItemListContainer>
+        <ItemListContainer>
+          <li>Collares</li>
+          <li>Alimento</li>
+          <li>Ropa</li>
+        </ItemListContainer>
         </body>
       </>
     )
