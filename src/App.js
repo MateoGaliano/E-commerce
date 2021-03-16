@@ -1,24 +1,19 @@
+import { Component } from 'react';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
-import { Component } from 'react';
-import ItemListContainer from './components/ItemListContainer';
+import Container from './components/ItemContainer/Container';
 import './App.css'
+import ItemContainer from './components/Counter/ItemContainer';
 
 class App extends Component {
   render() {
     return(
       <>
         <body>
-        <NavBar title="Woody"></NavBar>
+        <NavBar></NavBar>
         <Home></Home>
-        <ItemListContainer greeting="Bienvenidos!">
-          <p>En esta web vas a poder encontrar</p>
-        </ItemListContainer>
-        <ItemListContainer>
-          <li>Collares</li>
-          <li>Alimento</li>
-          <li>Ropa</li>
-        </ItemListContainer>
+        <Container></Container>
+        <ItemContainer></ItemContainer>
         </body>
       </>
     )

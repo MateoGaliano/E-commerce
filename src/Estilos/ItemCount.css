@@ -1,0 +1,17 @@
+.container div {
+    width: 12vw;
+    height: 40vh;
+    border: 2px solid #292929;
+    box-shadow: 3px 3px 10px #292929;
+}
+
+.container div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: .9;
+}
+
+form p {
+    color:black;
+}

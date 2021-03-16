@@ -1,4 +1,3 @@
-import CartWidget from "./CartWidget";
 import '../Estilos/NavBar.css'
 
 const NavBar = () => {
@@ -103,9 +102,12 @@ function validarCuenta() {
               <a href="Secciones\Accesorios\index.html">Accesorios</a>
             </li>
           </ul>
-
-          <i className="fas fa-user" id="user"></i>
-
+          
+          <div>
+            <i className="fas fa-shopping-bag" id="bag"></i>
+            <i className="fas fa-user" id="user"></i>
+          </div>
+        
           <div className="login">
             <form>
               <label>Login</label>
@@ -138,7 +140,6 @@ function validarCuenta() {
               </li>
             </ul>
           </div>
-          <CartWidget />
         </nav>
       </header>
     </>
