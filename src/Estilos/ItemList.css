@@ -1,0 +1,12 @@
+.contenedor {
+    width: 90vw;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+ul {
+    list-style: none;
+}
+
+

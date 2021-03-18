@@ -1,4 +1,6 @@
+import React from 'react';
 import '../Estilos/NavBar.css'
+import {useState} from 'react';
 
 const NavBar = () => {
 
@@ -33,60 +35,23 @@ const NavBar = () => {
   };
 
   navSlide();
-
-//USER DESPLEGABLE
-
-const navUser = () => {
-    const user = document.getElementById('user')
-    const login = document.querySelector('.login')
-
-    user.addEventListener('click',userclick)
-
-    function userclick() {
-        //user desplegable
-        login.classList.toggle('user-active');
-    }
-}
-
-navUser();
-
-// FORMULARIO LOGIN
-
-var usuario = document.getElementById('mail')
-var contra = document.getElementById('contra')
-var ingresar = document.getElementById('ingresar')
-
-ingresar.addEventListener('click',validarCuenta)
-
-function validarCuenta() {
-        if(usuario.value=='') {
-            usuario.style.backgroundColor = '#f58f7d'
-            usuario.setCustomValidity('Ingresa tu mail')
-        }
-        else if(usuario.value!=='') {
-            usuario.setCustomValidity('')
-        }
-
-        else if(contra.value=='') {
-            contra.style.backgroundColor = '#f58f7d'
-            contra.setCustomValidity('Complete el campo con su contraseña')
-        }
-        else {
-            contra.setCustomValidity('')
-        }
-    }
-
 */
+
+const [dropDown, setDropDown] = useState(false)
+
+const setOpenClose = () =>
+  setDropDown(!dropDown)
+
 
   return (
     <>
       <header>
         <nav>
-          <div className="burger">
+          <button className="burger" onClick={dropDown} toggle={setOpenClose}>
             <div className="line1"></div>
             <div className="line2"></div>
             <div className="line3"></div>
-          </div>
+          </button>
 
           <ul className="nav-links">
             <li>

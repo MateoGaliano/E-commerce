@@ -1,11 +1,11 @@
 import ItemList from './ItemList';
+import "../../Estilos/ItemListContainer.css"
 
 const ItemListContainer = (props) => {
     return(
-        <>
-        <p>Contenedor</p>
-        <ItemList items={props.items}></ItemList>
-        </>
+        <div className="container">
+            <ItemList items={props.items}></ItemList>
+        </div>
     )
 };
 

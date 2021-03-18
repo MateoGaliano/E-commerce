@@ -1,0 +1,16 @@
+.img-counter {
+    border: 1px solid black;
+    height: 20vw;
+    width: 15vw;
+}
+
+.img-counter_collar {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+li {
+    list-style: none;
+}

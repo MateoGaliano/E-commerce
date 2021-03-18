@@ -12,17 +12,12 @@ nav {
 }
 
 .burger {
-    display: none;
-    position: absolute;
-    top:15px;
-    left:10px;
     display: block;
     cursor: pointer;
-    z-index: 10;
+
 }
 
 .burger div {
-    display: none;
     width: 25px;
     height: 3px;
     background-color: #292929;

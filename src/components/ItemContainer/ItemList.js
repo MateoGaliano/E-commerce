@@ -1,15 +1,15 @@
-import Item from './Item'
+import Item from './Item';
+import '../../Estilos/ItemList.css'
+
 
 const ItemList = (props) => {
+
     return(
-        <>
-            <p>Esta lista tiene</p>
-            <ul>
-                {props.items.map((x,index) => (
-                    <Item key={index} item={x}></Item>
-                ))}
-            </ul>
-        </>
+        <div className="contenedor">
+            
+            {props.items.map( item => <Item key={item.id}{ ...item } /> )}
+
+        </div>
     )
 }
 
