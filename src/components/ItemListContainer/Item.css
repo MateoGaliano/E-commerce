@@ -1,5 +1,8 @@
-.img-counter {
+.div-counter {
     border: 1px solid black;
+}
+
+.img-counter {
     height: 20vw;
     width: 15vw;
 }

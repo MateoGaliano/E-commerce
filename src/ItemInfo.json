@@ -1,0 +1,33 @@
+[{
+    "id":1,
+    "titulo":"Collar verde y blanco",
+    "descripcion":"Collar con hebilla identificadora + correa de 5 metros de largo",
+    "talle": "M",
+    "material": "Tela",
+    "precio": 100
+},
+    {
+    "id":2,
+    "titulo":"Collar rojo y blanco",
+    "descripcion":"Collar con hebilla identificadora",
+    "talle": "M",
+    "material": "Tela",
+    "precio": 50
+},
+    {
+    "id":3,
+    "titulo":"Pretal azul",
+    "descripcion":"Pretal con hebilla identificadora + correa extensible de 10 metros de largo",
+    "talle": "M",
+    "material": "Tela",
+    "precio": 300
+},
+    {
+    "id":4,
+    "titulo":"Pretal amarillo",
+    "descripcion":"Collar con hebilla identificadora + correa extensible de 5 metros de largo",
+    "talle": "M",
+    "material": "Tela",
+    "precio": 200
+}
+]

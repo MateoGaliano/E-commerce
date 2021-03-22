@@ -1,0 +1,25 @@
+.detail-counter {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40vw;
+    margin-top: 20px;
+    align-items: center;
+    width: 20vw;
+    border: 1px solid black;
+}
+
+.detail-img {
+    border: 1px solid black;
+    height: 20vw;
+    width: 20vw;
+}
+
+.detail-img_collar {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+li {
+    list-style: none;
+}

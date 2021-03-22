@@ -1,5 +1,5 @@
-import "../Estilos/Home.css";
-import Portada from '../Assets/Portada.png';
+import "./Home.css";
+import Portada from '../../Assets/Portada.png';
 
 function Home() {
   return (

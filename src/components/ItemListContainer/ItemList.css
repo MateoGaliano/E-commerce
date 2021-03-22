@@ -1,8 +1,8 @@
 .contenedor {
-    width: 90vw;
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
-
+    
 }
 
 ul {

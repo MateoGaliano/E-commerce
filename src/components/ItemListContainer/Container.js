@@ -1,5 +1,7 @@
-import {useState, useEffect, Component} from 'react';
+import {useState, useEffect} from 'react';
 import ItemListContainer from './ItemListContainer';
+import ItemInfo from '../../ItemInfo.json';
+import {Link} from 'react-router-dom';
 
 function Container() {
 
@@ -10,7 +12,7 @@ useEffect(() => {
   new Promise((todoBien, todoMal) => {
 
     setTimeout(() => {
-      todoBien([{imgUrl:"/Assets/collar1.png", id:1, titulo: 'collar rojo', precio: 100},{imgUrl:"/Assets/collar1.png", id:2, titulo: 'collar verde', precio: 200},{imgUrl:"/Assets/collar1.png", id:3, titulo:'collar amarillo', precio: 300},{imgUrl:"/Assets/collar1.png", id:4, titulo:'collar azul', precio: 400}]);
+      todoBien(ItemInfo);
     },2000);
 
   }).then((resultado) => setItems(resultado));

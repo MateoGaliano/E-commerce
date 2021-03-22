@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import '../../Estilos/Counter.css'
+import './Counter.css';
 
 const Counter = ({init, stock, onAdd}) => {
 
