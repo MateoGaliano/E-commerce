@@ -1,17 +1,17 @@
 .detail-counter {
     display: flex;
-    flex-direction: column;
-    margin-left: 40vw;
-    margin-top: 20px;
-    align-items: center;
-    width: 20vw;
-    border: 1px solid black;
+    justify-content: space-around;
+    margin:10px;
+    width: 90vw;
+    height: 85vh;
+    border: 1px solid #292929;
 }
 
 .detail-img {
-    border: 1px solid black;
-    height: 20vw;
-    width: 20vw;
+    border: 1px solid #292929;
+    width: 40vw;
+    height: 85vh;
+    float: left;
 }
 
 .detail-img_collar {
@@ -20,6 +20,14 @@
     object-fit: cover;
 }
 
+.detail-list {
+
+}
+
 li {
     list-style: none;
+}
+
+.counter {
+    flex-direction: wrap;
 }

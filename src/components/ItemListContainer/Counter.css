@@ -1,36 +1,21 @@
 .counter-container {
     height: 8vw;
-    width: 15vw;
-}
-
-.container_img {
-    width: 15vw;
-    height: 40vh;
-    border: 1px solid #292929;
-}
-
-.container_img img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    opacity: .9;
+    width: 14vw;
 }
 
 p {
     font-family: 'Josefin Sans', sans-serif;
-    color:black;
-    margin-left: 25px;
+    color: #494949;
 }
 
 .input-button {
-    margin: 10px 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 10px 0;
 }
 
 .cantidad {
-    width: 6vw;
+    width: 5vw;
     height: 2vw;
     border: 1px solid #494949;
 }
@@ -52,8 +37,7 @@ p {
 }
 
 .agregar {
-    margin-left: 18px;
-    width: 12.5vw;
+    width: 14vw;
     height: 2vw;
     background-color: #494949;
     color: #fff;

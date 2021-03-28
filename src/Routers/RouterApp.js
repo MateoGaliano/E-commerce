@@ -1,49 +1,26 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
-import Collares from '../components/Categorias/Collares';
-import Ropa from '../components/Categorias/Ropa';
-import Alimento from '../components/Categorias/Alimento';
-import Accesorios from '../components/Categorias/Accesorios';
+import {BrowserRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
+import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from '../components/Detail/ItemDetailContainer';
+import Home from '../components/Home/Home';
 import './RouterApp.css';
-
+import Navbar from '../components/Navbar/Navbar';
 
 function RouterApp() {
   return (
     <div className="Router-app">
         <Router>
-              <nav className="nav">
-                <ul className="nav-links">
-                  <li>
-                    <Link to="/collares">Collares</Link>
-                  </li>
-                  <li>
-                    <Link to="/ropa">Ropa</Link>
-                  </li>
-                  <li>
-                    <Link to="/alimento">Alimento</Link>
-                  </li>
-                  <li>
-                    <Link to="/accesorios">Accesorios</Link>
-                  </li>
-                </ul>
-
-                <i>Logo</i>
-
-                <ul>
-                  <li><i>Usuario</i></li>
-                  <li><i>Carrito</i></li>
-                </ul>
-              </nav>    
-
+              
+              <Navbar></Navbar>
+        
               <Switch>
-                    <Route path="/collares" component={Collares}></Route>
-                    <Route path="/ropa" component={Ropa}></Route>
-                    <Route path="/aliemnto" component={Alimento}></Route>
-                    <Route path="/accesorios" component={Accesorios}></Route>
+                    <Route exact path="/" component={Home}></Route>
+
+                    <Route path="/category/:categoryId" component={ItemListContainer}></Route>
 
                     <Route path="/item/:itemid" component={ItemDetailContainer}></Route>
-                </Switch>
+              </Switch>
+              <Redirect to="/"/>
         </Router>
     </div>
   );

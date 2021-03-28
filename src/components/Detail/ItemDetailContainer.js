@@ -2,13 +2,12 @@ import { useEffect, useState } from 'react';
 import ItemInfo from '../../ItemInfo.json';
 import ItemDetail from './ItemDetail';
 
-
 const ItemDetailContainer = () => {
 
-    const [dropDown, handleDropDown] = useState({})
+    const [detail, handleDropDown] = useState({})
 
    const [ detailItem ] = ItemInfo.filter( item => item.id === 1)
-   
+
     useEffect(() => {
 
         new Promise((respond, rejected) => {
@@ -21,7 +20,7 @@ const ItemDetailContainer = () => {
 
     return(
         <div>
-            <ItemDetail detail={dropDown}></ItemDetail>
+            <ItemDetail detail={detail}></ItemDetail>
         </div>
     )
 }

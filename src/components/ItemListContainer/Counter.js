@@ -24,13 +24,17 @@ const handleChange = (e) => {
     return(
         <>
           <div className="counter-container">
-          <p>Stock: {stock}</p>
-          <div className="input-button">
-          <input className="cantidad" type="number" placeholder={init} value={counter} onChange={handleChange}></input>
-          <button id="suma" onClick={handelUp} >+1</button>
-          <button id="resta" onClick={handleDown} >-1</button>
-          </div>
+
+            <p>Stock: {stock}</p>
+
+            <div className="input-button">
+              <input className="cantidad" type="number" placeholder={init} value={counter} onChange={handleChange}></input>
+              <button id="suma" onClick={handelUp} >+1</button>
+              <button id="resta" onClick={handleDown} >-1</button>
+            </div>
+
             <button className="agregar" onClick={(e) => onAdd(e, counter)}>Agregar</button>
+
           </div>
         </>
     )

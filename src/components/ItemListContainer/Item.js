@@ -19,17 +19,17 @@ const Item = (props) => {
 
     return(
       <>
-        <div className="div-counter">
+        <div className="card-container">
         <Link to={`/item/${props.id}`}>
           
-            <div className="img-counter">
-              <img className="img-counter_collar" src={collar1}></img>
+            <div className="img-container">
+              <img className="img-collar" src={collar1}></img>
             </div>
 
-            <div>
+            <ul className="list">
               <li>N° Producto:{props.id}</li>
               <li>{props.titulo}</li>
-            </div>
+            </ul>
           
         </Link>
         <Counter className="counter" init={1} stock={stockActual} onAdd={restarStock}></Counter>

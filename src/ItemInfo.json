@@ -1,5 +1,6 @@
 [{
     "id":1,
+    "category":"collares",
     "titulo":"Collar verde y blanco",
     "descripcion":"Collar con hebilla identificadora + correa de 5 metros de largo",
     "talle": "M",
@@ -8,6 +9,7 @@
 },
     {
     "id":2,
+    "category":"ropa",
     "titulo":"Collar rojo y blanco",
     "descripcion":"Collar con hebilla identificadora",
     "talle": "M",
@@ -16,6 +18,7 @@
 },
     {
     "id":3,
+    "category":"alimento",
     "titulo":"Pretal azul",
     "descripcion":"Pretal con hebilla identificadora + correa extensible de 10 metros de largo",
     "talle": "M",
@@ -24,6 +27,7 @@
 },
     {
     "id":4,
+    "category":"collares",
     "titulo":"Pretal amarillo",
     "descripcion":"Collar con hebilla identificadora + correa extensible de 5 metros de largo",
     "talle": "M",
