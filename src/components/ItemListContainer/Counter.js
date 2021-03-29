@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {Link} from 'react-router-dom';
 import './Counter.css';
 
 const Counter = ({init, stock, onAdd}) => {
@@ -21,6 +22,15 @@ const handleChange = (e) => {
   setCounter(e.target.value)
 };
 
+
+const [botonFinalizar, setBotonFinalizar] = useState(false)
+
+const [productoAgregado, setProdcutoAgregado] = useState ()
+
+const handleproductosAgregados = (e) => {
+console.log()
+}
+
     return(
         <>
           <div className="counter-container">
@@ -34,7 +44,9 @@ const handleChange = (e) => {
             </div>
 
             <button className="agregar" onClick={(e) => onAdd(e, counter)}>Agregar</button>
-
+            <Link to="/cart">
+              <button className="terminar" disabled={!botonFinalizar} onChange={handleproductosAgregados}>Finalizar compra</button>
+            </Link>
           </div>
         </>
     )

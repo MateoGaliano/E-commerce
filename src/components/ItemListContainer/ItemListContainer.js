@@ -17,10 +17,7 @@ function ItemListContainer() {
   
       setTimeout(() => {
         if (categoryId) {
-          resolve(ItemInfo.filter( productos =>{
-            console.log(productos)
-            console.log(categoryId)
-            return productos.category === categoryId }))
+          resolve(ItemInfo.filter( producto =>producto.category === categoryId ))
         } else {
           resolve(ItemInfo)
         }

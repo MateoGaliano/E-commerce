@@ -1,21 +1,22 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
 import ItemInfo from '../../ItemInfo.json';
 import ItemDetail from './ItemDetail';
 
 const ItemDetailContainer = () => {
 
-    const [detail, handleDropDown] = useState({})
+    const [detail, setDetail] = useState({})
 
-   const [ detailItem ] = ItemInfo.filter( item => item.id === 1)
+    const {itemId} = useParams()
 
     useEffect(() => {
 
         new Promise((respond, rejected) => {
             setTimeout(() => {
-                respond(detailItem);
+                respond(ItemInfo.find(item => item.id.toString() === itemId));
               },1000);
 
-            }).then((resultado) => handleDropDown(resultado));
+            }).then((resultado) => setDetail(resultado));
         })
 
     return(

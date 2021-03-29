@@ -47,3 +47,16 @@ p {
 .agregar:hover {
     background-color: #292929;
 }
+
+.terminar {
+    width: 14vw;
+    height: 2vw;
+    background-color: #494949;
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top:5px;
+}
+
+.terminar:hover {
+    background-color: #292929;
+}

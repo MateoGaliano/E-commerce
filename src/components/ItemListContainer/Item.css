@@ -32,3 +32,15 @@ li {
     font-size: 1vw;
     font-family: 'Josefin Sans', sans-serif;
 }
+
+.detail-button {
+    width: 6vw;
+    height: 3vw;
+    background-color: #494949;
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.detail-button:hover {
+    background-color: #292929;
+}

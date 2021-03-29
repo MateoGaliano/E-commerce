@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from '../components/Detail/ItemDetailContainer';
 import Home from '../components/Home/Home';
@@ -18,7 +18,9 @@ function RouterApp() {
 
                     <Route path="/category/:categoryId" component={ItemListContainer}></Route>
 
-                    <Route path="/item/:itemid" component={ItemDetailContainer}></Route>
+                    <Route path="/item/:itemId" component={ItemDetailContainer}></Route>
+
+                    <Route path="/cart"></Route>
               </Switch>
               <Redirect to="/"/>
         </Router>
