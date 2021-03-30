@@ -1,14 +1,13 @@
 .detail-counter {
     display: flex;
     justify-content: space-around;
-    margin:10px;
     width: 90vw;
-    height: 85vh;
-    border: 1px solid #292929;
+    height: 90vh;
 }
 
 .detail-img {
     border: 1px solid #292929;
+    margin: 20px;
     width: 40vw;
     height: 85vh;
     float: left;
@@ -20,14 +19,14 @@
     object-fit: cover;
 }
 
-.detail-list {
-
-}
-
-li {
+.detail-list li {
     list-style: none;
+    font-size: 25px;
+    padding: 20px 0;
 }
 
 .counter {
-    flex-direction: wrap;
+    position: absolute;
+    top:500px;
+    left: 700px;
 }

@@ -1,11 +1,14 @@
-[{
+[
+    {
     "id":1,
     "category":"collares",
     "titulo":"Collar verde y blanco",
     "descripcion":"Collar con hebilla identificadora + correa de 5 metros de largo",
     "talle": "M",
     "material": "Tela",
-    "precio": 100
+    "precio": 100,
+    "stock":10,
+    "url":"https://res.cloudinary.com/dzsq1rxz4/image/upload/v1616878126/Collares/Screenshot_11_uho9gn.png"
 },
     {
     "id":2,
@@ -14,7 +17,9 @@
     "descripcion":"Collar con hebilla identificadora",
     "talle": "M",
     "material": "Tela",
-    "precio": 50
+    "precio": 200,
+    "stock": 20,
+    "url":"https://res.cloudinary.com/dzsq1rxz4/image/upload/v1616878168/Collares/img-4_ixbevt.png"
 },
     {
     "id":3,
@@ -23,7 +28,9 @@
     "descripcion":"Pretal con hebilla identificadora + correa extensible de 10 metros de largo",
     "talle": "M",
     "material": "Tela",
-    "precio": 300
+    "precio": 300,
+    "stock": 30,
+    "url":"https://res.cloudinary.com/dzsq1rxz4/image/upload/v1616878126/Collares/Screenshot_20_hfhbvg.png"
 },
     {
     "id":4,
@@ -32,7 +39,9 @@
     "descripcion":"Collar con hebilla identificadora + correa extensible de 5 metros de largo",
     "talle": "M",
     "material": "Tela",
-    "precio": 200
+    "precio": 400,
+    "stock": 40,
+    "url":"https://res.cloudinary.com/dzsq1rxz4/image/upload/v1616878124/Collares/Screenshot_30_jtmfnr.png"
 },
     {
     "id":5,
@@ -41,6 +50,131 @@
     "descripcion":"Collar con hebilla identificadora + correa extensible de 5 metros de largo",
     "talle": "M",
     "material": "Tela",
-    "precio": 200
+    "precio": 100,
+    "stock": 10,
+    "url":"https://res.cloudinary.com/dzsq1rxz4/image/upload/v1616878167/Collares/img-5_dlcrlw.png"
+},
+    {
+    "id":6,
+    "category":"ropa",
+    "titulo":"Pretal amarillo",
+    "descripcion":"Collar con hebilla identificadora + correa extensible de 5 metros de largo",
+    "talle": "M",
+    "material": "Tela",
+    "precio": 200,
+    "stock": 20,
+    "url":"https://res.cloudinary.com/dzsq1rxz4/image/upload/v1616878167/Collares/img-5_dlcrlw.png"
+},
+    {
+    "id":7,
+    "category":"ropa",
+    "titulo":"Pretal amarillo",
+    "descripcion":"Collar con hebilla identificadora + correa extensible de 5 metros de largo",
+    "talle": "M",
+    "material": "Tela",
+    "precio": 300,
+    "stock": 30,
+    "url":"https://res.cloudinary.com/dzsq1rxz4/image/upload/v1616878167/Collares/img-5_dlcrlw.png"
+},
+    {
+    "id":8,
+    "category":"ropa",
+    "titulo":"Pretal amarillo",
+    "descripcion":"Collar con hebilla identificadora + correa extensible de 5 metros de largo",
+    "talle": "M",
+    "material": "Tela",
+    "precio": 400,
+    "stock": 40,
+    "url":"https://res.cloudinary.com/dzsq1rxz4/image/upload/v1616878167/Collares/img-5_dlcrlw.png"
+},
+    {
+    "id":9,
+    "category":"alimento",
+    "titulo":"Pretal amarillo",
+    "descripcion":"Collar con hebilla identificadora + correa extensible de 5 metros de largo",
+    "talle": "M",
+    "material": "Tela",
+    "precio": 100,
+    "stock": 10,
+    "url":"https://res.cloudinary.com/dzsq1rxz4/image/upload/v1616878167/Collares/img-5_dlcrlw.png"
+},
+    {
+    "id":10,
+    "category":"alimento",
+    "titulo":"Pretal amarillo",
+    "descripcion":"Collar con hebilla identificadora + correa extensible de 5 metros de largo",
+    "talle": "M",
+    "material": "Tela",
+    "precio": 200,
+    "stock": 20,
+    "url":"https://res.cloudinary.com/dzsq1rxz4/image/upload/v1616878167/Collares/img-5_dlcrlw.png"
+},
+    {
+    "id":11,
+    "category":"alimento",
+    "titulo":"Pretal amarillo",
+    "descripcion":"Collar con hebilla identificadora + correa extensible de 5 metros de largo",
+    "talle": "M",
+    "material": "Tela",
+    "precio": 300,
+    "stock": 30,
+    "url":"https://res.cloudinary.com/dzsq1rxz4/image/upload/v1616878167/Collares/img-5_dlcrlw.png"
+},
+    {
+    "id":12,
+    "category":"alimento",
+    "titulo":"Pretal amarillo",
+    "descripcion":"Collar con hebilla identificadora + correa extensible de 5 metros de largo",
+    "talle": "M",
+    "material": "Tela",
+    "precio": 400,
+    "stock": 40,
+    "url":"https://res.cloudinary.com/dzsq1rxz4/image/upload/v1616878167/Collares/img-5_dlcrlw.png"
+},
+    {
+    "id":13,
+    "category":"accesorios",
+    "titulo":"Pretal amarillo",
+    "descripcion":"Collar con hebilla identificadora + correa extensible de 5 metros de largo",
+    "talle": "M",
+    "material": "Tela",
+    "precio": 400,
+    "stock": 40,
+    "url":"https://res.cloudinary.com/dzsq1rxz4/image/upload/v1616878167/Collares/img-5_dlcrlw.png"
+},
+{
+    "id":14,
+    "category":"accesorios",
+    "titulo":"Pretal amarillo",
+    "descripcion":"Collar con hebilla identificadora + correa extensible de 5 metros de largo",
+    "talle": "M",
+    "material": "Tela",
+    "precio": 400,
+    "stock": 40,
+    "url":"https://res.cloudinary.com/dzsq1rxz4/image/upload/v1616878167/Collares/img-5_dlcrlw.png"
+},
+
+{
+    "id":15,
+    "category":"accesorios",
+    "titulo":"Pretal amarillo",
+    "descripcion":"Collar con hebilla identificadora + correa extensible de 5 metros de largo",
+    "talle": "M",
+    "material": "Tela",
+    "precio": 400,
+    "stock": 40,
+    "url":"https://res.cloudinary.com/dzsq1rxz4/image/upload/v1616878167/Collares/img-5_dlcrlw.png"
+},
+
+{
+    "id":16,
+    "category":"accesorios",
+    "titulo":"Pretal amarillo",
+    "descripcion":"Collar con hebilla identificadora + correa extensible de 5 metros de largo",
+    "talle": "M",
+    "material": "Tela",
+    "precio": 400,
+    "stock": 40,
+    "url":"https://res.cloudinary.com/dzsq1rxz4/image/upload/v1616878167/Collares/img-5_dlcrlw.png"
 }
 ]

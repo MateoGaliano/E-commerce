@@ -1,41 +1,43 @@
 import {useState} from 'react';
 import {Link} from 'react-router-dom';
 import Counter from './Counter';
-import collar1 from '../../Assets/collar1.png';
 import './Item.css';
 
 const Item = (props) => {
 
-    const [stockActual, setStockActual] = useState(10)
+    const [stockActual, setStockActual] = useState(props.stock)
 
     const restarStock = (e,nuevoStock) => {
         e.preventDefault();
-        if(nuevoStock <= stockActual) {
+        if(nuevoStock < stockActual) {
             setStockActual((stockActual) => stockActual - nuevoStock)
         } else {
-            alert('Stock insuficiente')
+           setStockActual('Disculpe, stock insuficiente')
         }
     }
 
+    const [cart,setCart] = useState([])
 
+    const addToCart = (stockActual) => {
+      console.log('agregar unidades')
+      setCart([...cart,stockActual])
+    };
 
-    return(
+    return( 
       <>
         <div className="card-container">
-        
-          
             <div className="img-container">
-              <img className="img-collar" src={collar1}></img>
+              <img className="img-collar" src={props.url}></img>
             </div>
 
             <ul className="list">
-              <li>N° Producto:{props.id}</li>
+              <li>Código de Producto: #{props.id}</li>
               <li>{props.titulo}</li>
             </ul>
             <Link to={`/item/${props.id}`}>
               <button className="detail-button" >Ver detalle</button>
             </Link>
-        <Counter className="counter" init={1} stock={stockActual} onAdd={restarStock}></Counter>
+        <Counter className="counter" init={1} stock={stockActual} onAdd={restarStock} cart={addToCart}></Counter>
         </div>
        
       </>

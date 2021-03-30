@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 import ItemInfo from '../../ItemInfo.json';
 import ItemList from '../ItemListContainer/ItemList';
 import './ItemListContainer.css'
@@ -9,7 +9,6 @@ function ItemListContainer() {
   const [items, setItems] = useState([])
 
   const {categoryId} = useParams()
-  console.log(categoryId)
 
   useEffect(() => {
   

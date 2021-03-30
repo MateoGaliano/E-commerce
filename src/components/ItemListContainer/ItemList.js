@@ -8,8 +8,6 @@ const ItemList = (props) => {
 
             {props.items.map( item => <Item key={item.id}{ ...item } /> )}
 
-            
-
         </div>
     )
 }

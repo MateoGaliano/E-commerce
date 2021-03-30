@@ -6,6 +6,7 @@ const Counter = ({init, stock, onAdd}) => {
 
 const [counter,setCounter] = useState(init)
 
+/*
 const handelUp = () => {
   if(counter < stock) {
     setCounter(counter + 1)
@@ -16,20 +17,18 @@ const handleDown = () => {
   if(counter > 1 ) {
     setCounter(counter - 1)
   }
-};
+};*/
 
 const handleChange = (e) => {
   setCounter(e.target.value)
 };
 
+const [cart,setCart] = useState([])
 
-const [botonFinalizar, setBotonFinalizar] = useState(false)
-
-const [productoAgregado, setProdcutoAgregado] = useState ()
-
-const handleproductosAgregados = (e) => {
-console.log()
-}
+const addToCart = (stock) => {
+  console.log('agrego unidades')
+  setCart([...cart,stock])
+};
 
     return(
         <>
@@ -39,14 +38,14 @@ console.log()
 
             <div className="input-button">
               <input className="cantidad" type="number" placeholder={init} value={counter} onChange={handleChange}></input>
-              <button id="suma" onClick={handelUp} >+1</button>
-              <button id="resta" onClick={handleDown} >-1</button>
             </div>
 
-            <button className="agregar" onClick={(e) => onAdd(e, counter)}>Agregar</button>
+            <button className="agregar" onClick={(e) => onAdd(e, counter) || addToCart(stock)} disabled={stock < 0}>Agregar unidades</button>
+
             <Link to="/cart">
-              <button className="terminar" disabled={!botonFinalizar} onChange={handleproductosAgregados}>Finalizar compra</button>
+              <button className="terminar" disabled={cart.length < 1} >Ir al carrito</button>
             </Link>
+            
           </div>
         </>
     )
