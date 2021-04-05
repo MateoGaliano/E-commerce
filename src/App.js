@@ -1,10 +1,20 @@
+import {useState} from 'react';
 import RouterApp from './Routers/RouterApp';
 import './App.css';
+import CartContext from './components/Cart/CartContext';
 
 function App() {
+
+  const [cart, setCart] = useState([]);
+
+ 
+
   return (
     <div className="App">
-      <RouterApp></RouterApp>
+      <CartContext.Provider value={{cart, setCart}}>
+        <RouterApp></RouterApp>
+      </CartContext.Provider>
+      
     </div>
   );
 };
