@@ -13,7 +13,6 @@ function ItemListContainer() {
   useEffect(() => {
   
     new Promise((resolve, reject) => {
-  
       setTimeout(() => {
         if (categoryId) {
           resolve(ItemInfo.filter( producto =>producto.category === categoryId ))

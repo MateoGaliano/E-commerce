@@ -7,27 +7,35 @@ const ItemDetailContainer = () => {
 
     const [detail, setDetail] = useState({})
 
+    const [loading, setLoading] = useState(true)
+  
    
     const {itemId} = useParams()
 
-    useEffect(() => {
 
-        new Promise((respond, rejected) => {
-            setTimeout(() => {
-                respond(ItemInfo.find(item => item.id.toString() === itemId));
-              },1000);
 
-            }).then((resultado) => setDetail(resultado));
-        })
+        useEffect(() => {
+                new Promise((respond, rejected) => {
+                    setTimeout(() => {
+                            respond(ItemInfo.find(item => item.id.toString() === itemId));
+                      },1000);
+        
+                    }).then((resultado) => {
+                        setDetail(resultado);
+                        setLoading(false)
+                    });
+            })
 
     return(
         <>
-        <div>
-            <ItemDetail detail={detail}></ItemDetail>
-        </div>
-
+        {
+            loading ? "" :
+            <div>
+                <ItemDetail detail={detail}></ItemDetail>
+            </div>
+        }
         </>
     )
-}
+    }
 
 export default ItemDetailContainer;

@@ -6,7 +6,9 @@ const CounterContainer = ({id, category, titulo, descripcion, talle, material, p
 
 const {cart, setCart} = useContext(CartContext)
 
+
 const [stock, setStock] = useState (stockInicial)
+
 const products = {id, category, titulo, descripcion, talle, material, precio, stockInicial, url}
 
 const onAdd = (q) => {

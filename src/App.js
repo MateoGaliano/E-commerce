@@ -6,8 +6,7 @@ import CartContext from './components/Cart/CartContext';
 function App() {
 
   const [cart, setCart] = useState([]);
-
- 
+  console.log(cart)
 
   return (
     <div className="App">
