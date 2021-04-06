@@ -5,6 +5,7 @@ import ItemDetailContainer from '../components/Detail/ItemDetailContainer';
 import Home from '../components/Home/Home';
 import './RouterApp.css';
 import Navbar from '../components/Navbar/Navbar';
+import PaymentPage from '../PaymentPage';
 
 function RouterApp() {
   return (
@@ -20,7 +21,7 @@ function RouterApp() {
 
                     <Route path="/item/:itemId" component={ItemDetailContainer}></Route>
 
-                    <Route path="/cart"></Route>
+                    <Route path="/cart" component={PaymentPage}></Route>
               </Switch>
               <Redirect to="/"/>
         </Router>

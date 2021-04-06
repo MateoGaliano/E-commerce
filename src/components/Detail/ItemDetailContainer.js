@@ -7,6 +7,7 @@ const ItemDetailContainer = () => {
 
     const [detail, setDetail] = useState({})
 
+   
     const {itemId} = useParams()
 
     useEffect(() => {
@@ -20,9 +21,12 @@ const ItemDetailContainer = () => {
         })
 
     return(
+        <>
         <div>
             <ItemDetail detail={detail}></ItemDetail>
         </div>
+
+        </>
     )
 }
 
