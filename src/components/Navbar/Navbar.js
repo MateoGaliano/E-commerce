@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom';
 import Woodyicon from '../../Assets/Woodyicon.jpg';
+import CartWidget from '../CartWidget/CartWidget';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -25,9 +26,9 @@ const Navbar = () => {
                   <img src={Woodyicon} className="logo"></img>
                 </Link>
 
-                <div>
+                <div className="icons">
                   <i className="fas fa-user" id="user"></i>
-                  <i className="fas fa-shopping-bag" id="bag"></i>
+                  <CartWidget></CartWidget>
                 </div>
               </nav>
     )

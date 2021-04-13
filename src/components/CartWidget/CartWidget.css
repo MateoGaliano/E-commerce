@@ -1,0 +1,36 @@
+
+.cart-widget_icon {
+    height:20px;
+}
+
+.cart-widget__items-container {
+    position: absolute;
+    z-index: 10;
+    right: 2.5rem;
+    min-height: 0;
+    padding: 1rem;
+    pointer-events: none;
+    opacity: 0;
+    border: solid 1px var(--color-alpha);
+    border-top: 3px solid var(--color-alpha);
+    background-color: white;
+    transition: opacity 0.3s ease;
+  }
+  
+  .cart-widget__items-container.active {
+    display: block;
+    pointer-events: auto;
+    min-height: 6rem;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+  }
+
+  .title {
+    color:black;
+    z-index: 20;
+  }
+
+ul li {
+    color:black;
+    z-index: 20;
+  }

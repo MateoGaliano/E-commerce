@@ -1,22 +1,20 @@
-import {useState, useContext} from 'react'
-import CartContext from '../../components/Cart/CartContext';
+import {useState, useContext} from 'react';
+import CartContext from '../../Context/CartContext';
 import Counter from './Counter';
 
 const CounterContainer = ({id, category, titulo, descripcion, talle, material, precio, stockInicial, url}) => {
 
-const {cart, setCart} = useContext(CartContext)
-
+const {addItem} = useContext(CartContext)
 
 const [stock, setStock] = useState (stockInicial)
-
 const products = {id, category, titulo, descripcion, talle, material, precio, stockInicial, url}
 
-const onAdd = (q) => {
-   if( q <= stock) {
-    setCart([...cart, {products, quantity:q}])
+const onAdd = (quantity) => {
+   if( quantity <= stock) {
+    addItem(products, quantity)
 
-    setStock(stock - q);
-   } else if (stock <= 1) {
+    setStock(stock - quantity);
+   } else {
        setStock('Disculpe, stock insuficiente')
    }
 };
@@ -36,7 +34,7 @@ const onAdd = (q) => {
 */
     return(
         <div>
-            <Counter className="counter" init={1} stock={stock} onAdd={onAdd} cart={cart}></Counter>
+            <Counter className="counter" init={1} stock={stock} onAdd={onAdd}></Counter>
         </div>
     )
 }

@@ -1,19 +1,40 @@
-import {useState} from 'react';
+import {getFirestore} from './configs/Firebase';
+import {useEffect, useState} from 'react';
 import RouterApp from './Routers/RouterApp';
 import './App.css';
-import CartContext from './components/Cart/CartContext';
+import CartProvider from './Context/CartProvider';
+import Inicio from './components/Inicio/Inicio';
 
 function App() {
 
-  const [cart, setCart] = useState([]);
-  console.log(cart)
+  useEffect(() => {
+    const db = getFirestore();
+    const categoriasCollection = db.collection('categorias')
+
+    categoriasCollection.get().then((resp) => {
+      if(resp.size === 0) {
+        console.log('Sin datos')
+      }
+      resp.docs.map((c) => console.log({id: c.id, ...c.data()}));
+    }).catch((error) => console.log(error))
+
+  },[]);
+
+  const [isLoad, setIsLoad] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoad(false)
+      },2000);
+  },[]);
 
   return (
     <div className="App">
-      <CartContext.Provider value={{cart, setCart}}>
+      { isLoad ? <Inicio></Inicio> :
+      <CartProvider>
         <RouterApp></RouterApp>
-      </CartContext.Provider>
-      
+      </CartProvider>
+      }
     </div>
   );
 };

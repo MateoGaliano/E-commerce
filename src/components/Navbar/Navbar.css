@@ -28,18 +28,12 @@
     margin-right: 325px;
 }
 
+.icons {
+    display: flex;
+    justify-content: space-between;
+}
+
 nav i {
     color: #292929;
     font-size: 20px;
-    padding: 0 15px;
-}
-
-.icons {
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    cursor: pointer;
 }
