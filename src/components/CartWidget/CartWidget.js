@@ -14,16 +14,20 @@ const handleClick = () => {
     setActive(!active)
 }
 
+let cant = 0
+
+for (let i=0; i < cart.length; i++ )
+    cant = cant + cart[i].quantity
     return(
         <>
             
             <div className="cart-widget_dropdown" onClick={handleClick}>
-                <h5>{cart.leght}</h5>
+                <h5 className="cart-length">{cant}</h5>
                 <img src={bagIcon} className="cart-widget_icon"></img>
             </div>
             <div className={`cart-widget__items-container ${active ? 'active' : ''}`}>
                 <ul>
-                    {cart.lenght === 0 ?
+                    {cart.length === 0 ?
                     <li>No hay productos agregados</li> :
                     cart.map((obj) => {  //si hago un map con llaves tengo que poner si o si return
                         return(

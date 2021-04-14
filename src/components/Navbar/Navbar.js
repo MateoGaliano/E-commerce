@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom';
 import Woodyicon from '../../Assets/Woodyicon.jpg';
+import User from '../User/User';
 import CartWidget from '../CartWidget/CartWidget';
 import './Navbar.css';
 
@@ -27,8 +28,8 @@ const Navbar = () => {
                 </Link>
 
                 <div className="icons">
-                  <i className="fas fa-user" id="user"></i>
-                  <CartWidget></CartWidget>
+                    <User></User>
+                    <CartWidget></CartWidget>
                 </div>
               </nav>
     )
