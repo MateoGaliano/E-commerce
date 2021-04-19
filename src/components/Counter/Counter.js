@@ -23,7 +23,7 @@ const handleDown = () => {
 };*/
 
 const handleChange = (e) => {
-  setCounter(e.target.value)
+  setCounter(Number(e.target.value))
 };
 
     return(

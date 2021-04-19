@@ -1,25 +1,24 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ItemInfo from '../../ItemInfo.json';
 import ItemDetail from './ItemDetail';
+import {getItemById} from '../Firebase/FirebaseComponent';
+
 
 const ItemDetailContainer = () => {
 
     const [detail, setDetail] = useState({})
 
     const [loading, setLoading] = useState(true)
-  
-   
+
     const {itemId} = useParams()
-
-
 
         useEffect(() => {
                 new Promise((respond, rejected) => {
-                    setTimeout(() => {
-                            respond(ItemInfo.find(item => item.id.toString() === itemId));
-                      },1000);
-        
+
+                    getItemById(itemId).then(d => {
+                        respond(d)
+                    })
+
                     }).then((resultado) => {
                         setDetail(resultado);
                         setLoading(false)

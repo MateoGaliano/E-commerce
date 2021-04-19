@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import CounterContainer from './CounterContainer';
+import CounterContainer from '../Counter/CounterContainer';
 import './Item.css';
 
 const Item = (props) => {

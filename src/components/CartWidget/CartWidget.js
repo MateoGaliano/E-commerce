@@ -16,8 +16,11 @@ const handleClick = () => {
 
 let cant = 0
 
-for (let i=0; i < cart.length; i++ )
+for (let i=0; i < cart.length; i++ ){
+console.log(typeof (cart[i].quantity))
     cant = cant + cart[i].quantity
+console.log(cant)
+}
     return(
         <>
             

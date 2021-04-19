@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
-import ItemInfo from '../../ItemInfo.json';
+import {findByCategoria} from '../Firebase/FirebaseComponent';
 import ItemList from '../ItemListContainer/ItemList';
 import './ItemListContainer.css'
 
@@ -11,20 +11,32 @@ function ItemListContainer() {
   const {categoryId} = useParams()
 
   useEffect(() => {
-  
+
     new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (categoryId) {
-          resolve(ItemInfo.filter( producto =>producto.category === categoryId ))
-        } else {
-          resolve(ItemInfo)
-        }
-      },2000);
-  
+
+      findByCategoria(categoryId).then(v => {
+         resolve(v)
+         })
+
     }).then((resultado) => setItems(resultado));
   },[categoryId]);
-  
-  /*
+
+
+    return (
+
+      <div className="container">
+        <ItemList items={items}></ItemList>
+      </div>
+    );
+  }
+
+  export default ItemListContainer
+
+
+
+
+
+    /*
 const cambiarDatos = () => {
 
   new Promise((todoBien, todoMal) => {
@@ -38,14 +50,3 @@ const cambiarDatos = () => {
 
 HTML ---->   <button onClick={cambiarDatos}>Cambiar Lista</button>
 */
-
-    return (
-
-      <div className="container">
-        <ItemList items={items}></ItemList>
-      </div>
-    
-    );
-  }
-  
-  export default ItemListContainer;

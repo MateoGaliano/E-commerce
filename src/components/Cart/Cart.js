@@ -48,8 +48,8 @@ for (let i=0; i < cart.length; i++) {
                     <button onClick={() => clearAll()}>VACIAR CARRITO</button>
                 </div>
                 <div>
-                    <NavLink to="/checkout">
-                        <button className="pay-button">PAGAR</button>
+                    <NavLink to="/information">
+                        <button className="pay-button">FINALIZAR COMPRA</button>
                     </NavLink>
                     
                 </div>
