@@ -4,7 +4,7 @@ import './Inicio.css'
 const Inicio = () => {
     return(
         <>
-            <img src={Woodyicon}></img>
+            <img src={Woodyicon} className="inicio"></img>
             <h2>Bienvenidos!</h2>
         </>
     )

@@ -1,4 +1,5 @@
 import {getFirestore} from '../../configs/Firebase';
+import 'firebase/firestore';
 
     const findAll = () => {
       const db = getFirestore();
@@ -13,7 +14,6 @@ import {getFirestore} from '../../configs/Firebase';
         }).catch((error) => console.log(error))
     }
 
-    
     const findByCategoria = (categoryId) => {
       const db = getFirestore();
         const categoriasCollection = db.collection('categorias').where('categoria', "==", categoryId)
@@ -25,17 +25,14 @@ import {getFirestore} from '../../configs/Firebase';
 
           return resp.docs.map((c) =>{return {id: c.id, ...c.data()}});
         }).catch((error) => console.log(error))
-
     }
 
-    const getItemById = () => {
+    const getItemById = (itemId) => {
       const db = getFirestore();
       const categoriasCollection = db.collection('categorias')
-      .doc(document.getElementById("idDoc"))
+      .doc(itemId)
 
-      categoriasCollection.get().then((res) => {
-        console.log(res.data())
-      })
+      return categoriasCollection.get().then((res) => res.data())
     }
 
 

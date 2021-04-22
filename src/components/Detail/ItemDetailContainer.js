@@ -13,11 +13,11 @@ const ItemDetailContainer = () => {
     const {itemId} = useParams()
 
         useEffect(() => {
-                new Promise((respond, rejected) => {
+                new Promise((resolve, rejected) => {
 
-                    getItemById(itemId).then(d => {
-                        respond(d)
-                    })
+                    getItemById(itemId).then(v => 
+                        resolve(v)
+                    )
 
                     }).then((resultado) => {
                         setDetail(resultado);

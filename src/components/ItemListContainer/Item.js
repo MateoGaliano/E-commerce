@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom';
 import CounterContainer from '../Counter/CounterContainer';
-import './Item.css';
+import './Item.css'
+
 
 const Item = (props) => {
 
@@ -12,7 +13,6 @@ const Item = (props) => {
             </div>
 
             <ul className="list">
-              <li>Código de Producto: #{props.id}</li>
               <li>{props.titulo}</li>
             </ul>
             <Link to={`/item/${props.id}`}>
@@ -20,7 +20,7 @@ const Item = (props) => {
             </Link>
         <CounterContainer
           id={props.id}
-          category={props.category}
+          categoria={props.categoria}
           titulo={props.titulo}
           descripcion={props.descripcion}
           talle={props.talle}

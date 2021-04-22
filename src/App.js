@@ -1,9 +1,10 @@
-import {getFirestore} from './configs/Firebase';
 import {useEffect, useState} from 'react';
 import RouterApp from './Routers/RouterApp';
 import './App.css';
 import CartProvider from './Context/CartProvider';
 import Inicio from './components/Inicio/Inicio';
+
+
 
 function App() {
 
@@ -13,8 +14,9 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoad(false)
-      },2000);
+      },1000);
   },[]);
+
 
   return (
     <div className="App">

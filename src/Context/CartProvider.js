@@ -29,7 +29,6 @@ const CartProvider = ({defaultValue = [], children}) => {
         }
     }
 
-
     return(
         <>
         <CartContext.Provider value={{cart, addItem, clearAll, removeItem, isInCart}}>
