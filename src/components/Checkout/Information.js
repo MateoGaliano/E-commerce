@@ -3,6 +3,7 @@ import {getFirestore} from '../../configs/Firebase';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import CartContext from '../../Context/CartContext';
+import './Information.css'
 
 
 const Information = () => {
@@ -42,7 +43,7 @@ const Information = () => {
     return(
         <>
             <div>Información personal
-                <form>
+                <form className="client-form">
                     <input type="text" name="name" placeholder="Nombre" onChange={handleInputChange}/>
                     <input type="text" name="apellido" placeholder="Apellido" onChange={handleInputChange}/>
                     <input type="text" name="email" placeholder="Mail" onChange={handleInputChange}/>
@@ -50,8 +51,10 @@ const Information = () => {
                     <input type="text" name="adress" placeholder="Dirección" onChange={handleInputChange}/>
                     <input type="text" name="city" placeholder="Ciudad" onChange={handleInputChange}/>
                     <input type="text" name="postcode" placeholder="Código Postal" onChange={handleInputChange}/>
-                    <input type="text" name="numero de orden" placeholder="Numero de orden" value={lastId} onChange={handleInputChange}/>
-                    <button onClick={create}>Crear</button>
+                    { lastId ? 
+                    <p>{`Tu número de orden es: #${lastId}`}</p>
+                   : "" }
+                    <button onClick={create}>Enviar</button>
                 </form>
             </div>
         </>

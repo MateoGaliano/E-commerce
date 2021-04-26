@@ -1,0 +1,11 @@
+.client-form {
+    width: 20vw;
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.client-form input {
+    margin-bottom: 1vw;
+    height: 25px;
+}

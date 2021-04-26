@@ -36,10 +36,10 @@ const handleChange = (e) => {
               <input className="cantidad" type="number" min="0" max="10" placeholder={init} value={counter} onChange={handleChange}></input>
             </div>
 
-            <button className="agregar" onClick={e => onAdd(counter)} disabled={stock < 1}>Agregar unidades</button>
+            <button className="agregar" className="btn btn-primary" onClick={e => onAdd(counter)} disabled={stock < 1}>Agregar unidades</button>
             { cart.length > 0 &&
               <Link to="/cart">
-                <button className="terminar">Ir al carrito</button>
+                <button className="terminar" className="btn btn-primary">Ir al carrito</button>
               </Link>
             }
 

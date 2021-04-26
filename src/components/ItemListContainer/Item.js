@@ -5,6 +5,7 @@ import './Item.css'
 
 const Item = (props) => {
 
+
     return(
       <>
         <div className="card-container">
@@ -14,11 +15,13 @@ const Item = (props) => {
 
             <ul className="list">
               <li>{props.titulo}</li>
+              <li>${props.precio}</li>
             </ul>
             <Link to={`/item/${props.id}`}>
-              <button className="detail-button" >Ver detalle</button>
+              <button type="button" className="detail-button" className="btn btn-primary">Detalle</button>
             </Link>
-        <CounterContainer
+            <div className="counter-container">
+            <CounterContainer
           id={props.id}
           categoria={props.categoria}
           titulo={props.titulo}
@@ -29,6 +32,8 @@ const Item = (props) => {
           stockInicial={props.stock}
           url={props.url}
           />
+            </div>
+        
         </div>
       </>
     )

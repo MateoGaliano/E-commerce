@@ -1,6 +1,7 @@
 .counter-container {
     height: 8vw;
     width: 14vw;
+    padding: 0 10px;
 }
 
 p {
