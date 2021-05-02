@@ -4,8 +4,6 @@ import './App.css';
 import CartProvider from './Context/CartProvider';
 import Inicio from './components/Inicio/Inicio';
 
-
-
 function App() {
 
 
@@ -14,12 +12,12 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoad(false)
-      },1000);
+      },1500);
   },[]);
 
 
   return (
-    <div className="App">
+    <div className="app">
       { isLoad ? <Inicio></Inicio> :
       <CartProvider>
         <RouterApp></RouterApp>

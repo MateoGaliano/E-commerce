@@ -4,9 +4,10 @@
     padding: 0 10px;
 }
 
-p {
+.stock {
     font-family: 'Josefin Sans', sans-serif;
     color: #494949;
+    width: 100px;
 }
 
 .input-button {
@@ -15,9 +16,8 @@ p {
     margin: 10px 0;
 }
 
-.cantidad {
-    width: 5vw;
-    height: 2vw;
+.quantity {
+    height: 30px;
     border: 1px solid #494949;
 }
 
@@ -37,27 +37,28 @@ p {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.agregar {
-    width: 14vw;
-    height: 2vw;
+#add {
+    width: 150px;
+    height: 30px;
     background-color: #494949;
     color: #fff;
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.agregar:hover {
+#add:hover {
     background-color: #292929;
 }
 
-.terminar {
-    width: 14vw;
-    height: 2vw;
+#go-to-cart {
+    width: 150px;
+    height: 30px;
     background-color: #494949;
     color: #fff;
     font-family: 'Josefin Sans', sans-serif;
     margin-top:5px;
 }
 
-.terminar:hover {
+#go-to-cart:hover {
     background-color: #292929;
 }
+

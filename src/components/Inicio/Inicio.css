@@ -1,8 +1,14 @@
-.inicio {
-    height: 20vw;
-    margin: 0;
+#welcome {
+    height: 30vw;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/*BREAKPOINT IPHONE X */
+@media screen and (max-width:599px) {
+    #welcome {
+        display: none;
+    }
 }

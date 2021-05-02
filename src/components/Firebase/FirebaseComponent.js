@@ -3,9 +3,9 @@ import 'firebase/firestore';
 
     const findAll = () => {
       const db = getFirestore();
-        const categoriasCollection = db.collection('categorias')
+        const novedadesCollection = db.collection('novedades')
 
-        return categoriasCollection.get().then((resp) => {
+        return novedadesCollection.get().then((resp) => {
           if(resp.size === 0) {
             console.log('Sin datos')
           }

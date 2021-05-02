@@ -1,17 +1,17 @@
 
 /* TITULOS */
 
-h1 {
+.landing h1 {
     position: relative;
+    margin-top:70px;
     font-family:'Josefin Sans', sans-serif;
-    font-size:120px;
     color: #292929;
     letter-spacing: 20px;
     margin-left: 100px;
     font-weight: 500;
 }
 
-h2 {
+.landing h2 {
     position: relative;
     font-family:'Josefin Sans', sans-serif;
     font-size:100px;
@@ -21,7 +21,7 @@ h2 {
     font-weight: 300;
 }
 
-h3 {
+.landing h3 {
     font-family:'Josefin Sans', sans-serif;
     font-size:20px;
     font-weight: 300;
@@ -37,7 +37,7 @@ h3 {
     height: 600px;
     width: 450px;
     position: absolute;
-    top:100px;
+    top:80px;
     right: 215px;
 }
 
@@ -68,8 +68,84 @@ h3 {
 .redes a i {
     position: relative;
     float: right;
-    margin-top: 70px;
+    margin-top: 240px;
     padding-right: 20px;
     color: #292929;
     font-size: 25px;
+}
+
+.novedades {
+    display: none;
+}
+
+/*BREAKPOINT IPHONE X */
+@media screen and (max-width:599px) {
+    .background {
+        display: none;
+    }
+    
+    .landing-img {
+        position: absolute;
+        top:0;
+        left: 0;
+        z-index: -10;
+    }
+
+    .picture {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100vw;
+    }
+
+    .landing h1{
+        position: absolute;
+        font-size: 40px;
+        letter-spacing:10px;
+        top:380px;
+        margin-left:20px;
+    }
+
+    .landing h2 {
+        position: absolute;
+        font-size: 40px;
+        letter-spacing:10px;
+        top:500px;
+        margin-left:20px;
+    }
+
+    .landing h3 i {
+        display: none;
+    }
+
+    .green-square {
+        position: relative;
+        top:490px;
+        height: 150px;
+        width: 100vw;
+        background-color:#4D5F54;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    .redes a i {
+        z-index: 20;
+        top:60px;
+        right: 0;
+        padding-right: 20px;
+    }
+
+    .novedades {
+        display: block;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(1fr);
+        margin-top:380px;
+        z-index:10; 
+    }
+
+    .card-container {
+        margin-bottom: 40px;
+        margin-left: 20px;
+    }
 }

@@ -5,11 +5,19 @@
     height: 350px;
     background-color: #fff;
     overflow: hidden;
+    margin-top:50px;
 }
 
 .card-container:hover {
-    height: 600px;
+    height: 580px;
+    transition: 1s;
 }
+
+.counter-container {
+    display:none;
+    margin-top: 10px;
+    margin-left: -5px;
+  }
 
 .card-container:hover .counter-container{
     display: block;
@@ -20,18 +28,11 @@
     width: 250px;
 }
 
-
 .img-container img{
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: scale-down;
     opacity: .9;
-}
-
-.img-collar {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
 }
 
 .list {
@@ -39,17 +40,14 @@
     padding: 0 10px;
 }
 
-li {
+.list li {
     padding:10px 0;
     color: #494949;
     font-size: 15px;
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.detail-button {
-    padding: 0 50px;
+#detail-button {
+    margin:0 10px;
 }
 
-.counter-container {
-    display:none;
-  }

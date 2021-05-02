@@ -1,31 +1,115 @@
+.cart-title {
+    margin: 20px 100px;
+}
+
 .cart-list {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.product-list {
-    width: 50vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.delete-button {
-    margin-right: 5vw;
+    flex-direction: row;
+    position: relative;
+    height: 200px;
+    width: 40vw;
+    margin: 100px;
+    background-color: white;
+    border: 1px solid #292929;
 }
 
 .total-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: 350px;
+    width: 40vw;
     float: right;
-    margin-right: 5vw;
+    margin-top: 80px;
+    margin-right: 100px;
+    padding:20px;
+    border: 1px solid #292929;
+    background-color: white;
+}
 
+.total-container div {
+    padding: 5px 0;
+}
+
+.payment {
+    width: 20vw;
+    margin-top:40px;
+}
+
+.product-list {
+    width: 20vw;
+    margin: 10px;
+}
+
+.product-list_container {
+    height: 200px;
+    width: 200px;
+}
+
+.product-list_img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.product-list li {
+  padding: 15px 0;
+  list-style: none;
+}
+
+.product-list_title {
+    font-weight: bold;
 }
 
 .no-product{
     display: flex;
-    justify-content: space-between;
-    margin: 3vw 3vw;
+    flex-direction: column;
+    justify-content:center;
+    margin: 20px 100px;
 }
+
+.delete-item {
+    position: absolute;
+    top:0;
+    right: 0;
+    margin: 10px;
+}
+
+.delete-item button {
+    font-weight: bolder;
+    border:none;
+    background: none;
+}
+
+@media screen and (max-width:599px) {
+    .cart-title {
+        margin: 20px 200px;
+    }
+
+    .no-product{
+        justify-content: space-around;
+    }
+
+    .total-container {
+        position: static;
+        left:50px;
+        width: 80vw;
+        
+        opacity: 1;
+    }
+
+    .cart-list {
+        top: 500px;        
+        width: 80vw;
+        margin: 50px;
+    }
+
+    .item-pic {
+        height: 100px;
+        width: 100px;
+        border: 1px solid red;
+    }
+
+    .product-list {
+        margin: 0 20px;
+    }
+
+
+  }

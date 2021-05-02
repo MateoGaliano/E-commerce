@@ -27,8 +27,10 @@ function RouterApp() {
                     <Route path="/cart" component={Cart}></Route>
 
                     <Route path="/information" component={Information}></Route>
+                    
+                    <Redirect to="/"/>
               </Switch>
-              <Redirect to="/"/>
+              
 
         </Router>
     </div>

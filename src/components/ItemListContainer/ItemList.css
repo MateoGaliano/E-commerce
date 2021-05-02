@@ -5,8 +5,16 @@
     grid-gap: 10px;
 }
 
-ul {
-    list-style: none;
+/*BREAKPOINT IPHONE X */
+@media screen and (max-width:599px) {
+    .contenedor {
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(1fr);
+        width: 90vw;
+        position: relative;
+        left: -25px;
+    }
+    
 }
-
 

@@ -5,14 +5,11 @@
     font-family: 'Josefin Sans', sans-serif;
     min-height:7vh;
     width: 100vw;
-    background-color:#F5F5F5;
     outline: 1px solid #292929;
 }
 
 .menu-icon {
-    margin-left: 30px;
-    height: 50px;
-    width: 20px;
+    margin-left: 10px;
 }
 
 .nav-links li {
@@ -21,25 +18,27 @@
     text-decoration: none;
     letter-spacing: 3px;
     font-size: 15px;
+    margin:15px auto;
 }
 
 .logo {
     height: 40px;
+    margin-left:50px;
 }
 
 .category-menu {
     position: absolute;
     top: 7.2vh;
-    height: 25vh;
+    height: 30vh;
     width: 20vw;
     z-index: 10;
     pointer-events: none;
     opacity: 0;
-    background-color: #F5F5F5;
+    background-color: white;
     transition: opacity 0.3s ease;
   }
-  
-  .category-menu.active {
+
+.category-menu.active {
     display: block;
     pointer-events: auto;
     opacity: 1;
@@ -55,3 +54,20 @@
 .user {
     margin-right: 20px;
 }
+
+
+/*BREAKPOINT IPHONE X */
+@media screen and (max-width:599px) {
+    .logo {
+        margin-left: 10vw;
+    }
+
+    .menu-icon {
+        margin-left: 20px;
+    }
+
+    .category-menu {
+        width: 30vw;
+    }
+}
+

@@ -7,8 +7,27 @@ const CartProvider = ({defaultValue = [], children}) => {
     console.log(cart)
 
     //MUESTRO PRODUCTO AGREGADO
+    
     const addItem = (item, quantity) => {
-        setCart([...cart, {item, quantity}])
+        console.log("entro a addItem")
+        //setCart([...cart, {item, quantity}])
+        setCart(cart.map((v) => {
+            console.log("entro al setcart")
+            console.log(v)
+            if(v.id === item.id) {
+                console.log("ento al id")
+                return {
+                    item,
+                    quantity: v.quantity + quantity
+                }
+            }
+            return {
+                item,
+                quantity: v.quantity + quantity
+            }
+
+        }))
+        console.log(cart)
     }
 
     const removeItem = (itemId) => {

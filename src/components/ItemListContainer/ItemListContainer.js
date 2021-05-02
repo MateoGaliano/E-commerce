@@ -21,11 +21,10 @@ function ItemListContainer() {
     }).then((resultado) => setItems(resultado));
   },[categoryId]);
 
-
     return (
 
       <div className="container">
-      
+        <h4>CATEGORIA</h4>
         <ItemList items={items}></ItemList>
       </div>
     );

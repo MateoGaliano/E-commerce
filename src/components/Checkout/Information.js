@@ -22,9 +22,10 @@ const Information = () => {
 
     const order= {buyer, items: cart, createOn: firebase.firestore.Timestamp.fromDate(new Date()), total:2000}
 
-    const [db, setDb] = useState(getFirestore())
     const [lastId ,setLastId] = useState()
+
     function create(e) {
+      const db = getFirestore();
       e.preventDefault()
       const orders = db.collection("orders");
 
@@ -42,19 +43,21 @@ const Information = () => {
 
     return(
         <>
-            <div>Información personal
-                <form className="client-form">
-                    <input type="text" name="name" placeholder="Nombre" onChange={handleInputChange}/>
-                    <input type="text" name="apellido" placeholder="Apellido" onChange={handleInputChange}/>
-                    <input type="text" name="email" placeholder="Mail" onChange={handleInputChange}/>
-                    <input type="text" name="phone" placeholder="Número de teléfono" onChange={handleInputChange}/>
-                    <input type="text" name="adress" placeholder="Dirección" onChange={handleInputChange}/>
-                    <input type="text" name="city" placeholder="Ciudad" onChange={handleInputChange}/>
-                    <input type="text" name="postcode" placeholder="Código Postal" onChange={handleInputChange}/>
-                    { lastId ? 
+            <div>
+                <h5  className="delivery-title">DATOS DE ENTREGA</h5>
+                <form className="client-form">|
+                    <input type="text" name="name" placeholder="Nombre" required onChange={handleInputChange}/>
+                    <input type="text" name="apellido" placeholder="Apellido" required onChange={handleInputChange}/>
+                    <input type="email" name="email" placeholder="Mail" minlength="5" maxlength="30" required onChange={handleInputChange}/>
+                    <input type="email" name="email" placeholder="Confirmar mail" minlength="5" maxlength="30" required onChange={handleInputChange}/>
+                    <input type="number" name="phone" placeholder="Número de teléfono" required onChange={handleInputChange}/>
+                    <input type="text" name="adress" placeholder="Dirección" required onChange={handleInputChange}/>
+                    <input type="text" name="city" placeholder="Ciudad" required onChange={handleInputChange}/>
+                    <input type="number" name="postcode" placeholder="Código Postal" required onChange={handleInputChange}/>
+                    { lastId ?
                     <p>{`Tu número de orden es: #${lastId}`}</p>
                    : "" }
-                    <button onClick={create}>Enviar</button>
+                    <button className="btn btn-dark btn-sm" onClick={create}>Enviar</button>
                 </form>
             </div>
         </>

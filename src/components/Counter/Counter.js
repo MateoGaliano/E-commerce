@@ -10,7 +10,7 @@ const [counter,setCounter] = useState(init)
 const {cart} = useContext(CartContext)
 
 /*
-const handelUp = () => {
+const handleUp = () => {
   if(counter < stock) {
     setCounter(counter + 1)
   }
@@ -30,20 +30,19 @@ const handleChange = (e) => {
         <>
           <div className="counter-container">
 
-            <p>Stock: {stock}</p>
+            <p className="stock">Stock: {stock}</p>
 
             <div className="input-button">
-              <input className="cantidad" type="number" min="0" max="10" placeholder={init} value={counter} onChange={handleChange}></input>
+              <input className="quantity" type="number" min="0" max="10" placeholder={init} value={counter} onChange={handleChange}></input>
             </div>
 
-            <button className="agregar" className="btn btn-primary" onClick={e => onAdd(counter)} disabled={stock < 1}>Agregar unidades</button>
+            <button id  ="add" className="btn btn-dark btn-sm" onClick={e => onAdd(counter)} disabled={stock < 1}>Agregar unidades</button>
             { cart.length > 0 &&
               <Link to="/cart">
-                <button className="terminar" className="btn btn-primary">Ir al carrito</button>
+                <button id="go-to-cart" className="btn btn-dark btn-sm">Ir al carrito</button>
               </Link>
             }
-
-          </div>
+           </div>
         </>
     )
 }
