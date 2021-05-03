@@ -1,4 +1,4 @@
-# Project Title
+# Woody's French
 
 Woody's French is a basic e-commerce webpage, where you can find lots of products for your pet!
 
