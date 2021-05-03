@@ -10,28 +10,18 @@ const CartProvider = ({defaultValue = [], children}) => {
     
     const addItem = (item, quantity) => {
         setCart([...cart, {item, quantity}])
+        setCart(addUniqueItem(item, quantity))
     }
     
+    const addUniqueItem = (item, quantity) => {
+        const indexOfFoundItem  = cart.findIndex(v => v.item.id === item.id);
+        if (cart.length === 0 || indexOfFoundItem === -1)
+            return [...cart, {item, quantity}]
+        cart[indexOfFoundItem] = {item, quantity: cart[indexOfFoundItem].quantity + quantity}
+        return [...cart];
+    }
 
-        /*setCart(cart.map((v) => {
-            console.log("entro al setcart")
-            console.log(v)
-            if(v.id === item.id) {
-                console.log("ento al id")
-                return {
-                    item,
-                    quantity: v.quantity + quantity
-                }
-            }
-            return {
-                item,
-                quantity: v.quantity + quantity
-            }
-
-        }))*/
-    
-
-    const removeItem = (itemId) => {
+       const removeItem = (itemId) => {
         setCart( cart.filter( c => c.item.id !== itemId))
     }
 
