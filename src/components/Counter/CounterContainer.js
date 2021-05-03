@@ -2,12 +2,12 @@ import {useState, useContext} from 'react';
 import CartContext from '../../Context/CartContext';
 import Counter from './Counter';
 
-const CounterContainer = ({id, categoria, titulo, descripcion, talle, material, peso, precio, stockInicial, url, detailUrl}) => {
+const CounterContainer = ({id, categoria, titulo, descripcion, precio, stockInicial, url}) => {
 
 const {addItem} = useContext(CartContext)
 
 const [stock, setStock] = useState (stockInicial)
-const products = {id, categoria, titulo, descripcion, talle, material, precio, peso, stockInicial, url, detailUrl}
+const products = {id, categoria, titulo, descripcion, precio, stockInicial, url}
 
 const onAdd = (quantity) => {
    if( quantity <= stock) {

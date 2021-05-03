@@ -24,7 +24,7 @@ const Information = () => {
 
     const [lastId ,setLastId] = useState()
     const [db, setDb] = useState(getFirestore())
-
+    
     function create(e) {
       e.preventDefault()
       const orders = db.collection("orders");
@@ -41,6 +41,7 @@ const Information = () => {
         });
       };
 
+      console.log(buyer)
     return(
         <>
             <div>
