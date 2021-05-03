@@ -21,25 +21,7 @@ const CartProvider = ({defaultValue = [], children}) => {
         return [...cart];
     }
 
-        /*setCart(cart.map((v) => {
-            console.log("entro al setcart")
-            console.log(v)
-            if(v.id === item.id) {
-                console.log("ento al id")
-                return {
-                    item,
-                    quantity: v.quantity + quantity
-                }
-            }
-            return {
-                item,
-                quantity: v.quantity + quantity
-            }
-
-        }))*/
-    
-
-    const removeItem = (itemId) => {
+       const removeItem = (itemId) => {
         setCart( cart.filter( c => c.item.id !== itemId))
     }
 
