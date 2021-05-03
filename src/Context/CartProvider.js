@@ -9,9 +9,11 @@ const CartProvider = ({defaultValue = [], children}) => {
     //MUESTRO PRODUCTO AGREGADO
     
     const addItem = (item, quantity) => {
-        console.log("entro a addItem")
-        //setCart([...cart, {item, quantity}])
-        setCart(cart.map((v) => {
+        setCart([...cart, {item, quantity}])
+    }
+    
+
+        /*setCart(cart.map((v) => {
             console.log("entro al setcart")
             console.log(v)
             if(v.id === item.id) {
@@ -26,9 +28,8 @@ const CartProvider = ({defaultValue = [], children}) => {
                 quantity: v.quantity + quantity
             }
 
-        }))
-        console.log(cart)
-    }
+        }))*/
+    
 
     const removeItem = (itemId) => {
         setCart( cart.filter( c => c.item.id !== itemId))

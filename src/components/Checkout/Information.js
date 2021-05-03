@@ -23,14 +23,14 @@ const Information = () => {
     const order= {buyer, items: cart, createOn: firebase.firestore.Timestamp.fromDate(new Date()), total:2000}
 
     const [lastId ,setLastId] = useState()
+    const [db, setDb] = useState(getFirestore())
 
-    function create(e) {
-      const db = getFirestore();
+    const create = (e) => {
       e.preventDefault()
       const orders = db.collection("orders");
 
-      return orders.add(order).then((resp) => {
-          return setLastId(resp.id);
+      orders.add(order).then((resp) => {
+          setLastId(resp.id);
         });
       };
 
@@ -45,11 +45,11 @@ const Information = () => {
         <>
             <div>
                 <h5  className="delivery-title">DATOS DE ENTREGA</h5>
-                <form className="client-form">|
+                <form className="client-form">
                     <input type="text" name="name" placeholder="Nombre" required onChange={handleInputChange}/>
                     <input type="text" name="apellido" placeholder="Apellido" required onChange={handleInputChange}/>
-                    <input type="email" name="email" placeholder="Mail" minlength="5" maxlength="30" required onChange={handleInputChange}/>
-                    <input type="email" name="email" placeholder="Confirmar mail" minlength="5" maxlength="30" required onChange={handleInputChange}/>
+                    <input type="email" name="email" placeholder="Mail" minLength="5" maxLength="30" required onChange={handleInputChange}/>
+                    <input type="email" name="email" placeholder="Confirmar mail" minLength="5" maxLength="30" required onChange={handleInputChange}/>
                     <input type="number" name="phone" placeholder="Número de teléfono" required onChange={handleInputChange}/>
                     <input type="text" name="adress" placeholder="Dirección" required onChange={handleInputChange}/>
                     <input type="text" name="city" placeholder="Ciudad" required onChange={handleInputChange}/>
@@ -57,7 +57,7 @@ const Information = () => {
                     { lastId ?
                     <p>{`Tu número de orden es: #${lastId}`}</p>
                    : "" }
-                    <button className="btn btn-dark btn-sm" onClick={create}>Enviar</button>
+                    <button className="btn btn-dark btn-sm" onClick={create}>CONTINUAR</button>
                 </form>
             </div>
         </>

@@ -24,7 +24,6 @@ function ItemListContainer() {
     return (
 
       <div className="container">
-        <h4>CATEGORIA</h4>
         <ItemList items={items}></ItemList>
       </div>
     );
