@@ -10,8 +10,16 @@ const CartProvider = ({defaultValue = [], children}) => {
     
     const addItem = (item, quantity) => {
         setCart([...cart, {item, quantity}])
+        setCart(addUniqueItem(item, quantity))
     }
-    
+     
+    const addUniqueItem = (item, quantity) => {
+        const indexOfFoundItem  = cart.findIndex(v => v.item.id === item.id);
+        if (cart.length === 0 || indexOfFoundItem === -1)
+            return [...cart, {item, quantity}]
+        cart[indexOfFoundItem] = {item, quantity: cart[indexOfFoundItem].quantity + quantity}
+        return [...cart];
+    }
 
         /*setCart(cart.map((v) => {
             console.log("entro al setcart")

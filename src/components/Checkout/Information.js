@@ -29,8 +29,8 @@ const Information = () => {
       e.preventDefault()
       const orders = db.collection("orders");
 
-      orders.add(order).then((resp) => {
-          setLastId(resp.id);
+      return orders.add(order).then((resp) => {
+          return setLastId(resp.id);
         });
       };
 
