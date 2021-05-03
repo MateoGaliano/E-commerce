@@ -25,12 +25,12 @@ const Information = () => {
     const [lastId ,setLastId] = useState()
     const [db, setDb] = useState(getFirestore())
 
-    const create = (e) => {
+    function create(e) {
       e.preventDefault()
       const orders = db.collection("orders");
 
-      orders.add(order).then((resp) => {
-          setLastId(resp.id);
+      return orders.add(order).then((resp) => {
+          return setLastId(resp.id);
         });
       };
 
